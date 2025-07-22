@@ -1,0 +1,24 @@
+<div class="flex justify-content-center align-items-center text-xl">
+    <p-image src="assets/Chatchali.jpg" alt="Image" width="100" />
+    Mon Portfolio
+</div>
+
+<p-toolbar styleClass="-mt-2">
+    <ng-template #start>
+
+    </ng-template>
+    <ng-template #center>
+        <p-button icon="pi pi-plus" label="Accueil" class="mr-2" text severity="secondary" />
+        <p-divider layout="vertical" />
+        <p-button icon="pi pi-print" label="Notre mission" class="mr-2" text severity="secondary" />
+        <p-divider layout="vertical" />
+        <p-button icon="pi pi-upload" label="Adoptions" text severity="secondary" />
+        <p-divider layout="vertical" />
+        <p-button icon="pi pi-upload" label="Événements" text severity="secondary" />
+        <p-divider layout="vertical" />
+        <p-button icon="pi pi-upload" label="Contacts" text severity="secondary" />
+    </ng-template>
+    <ng-template #end>
+        <p-splitbutton label="Nous soutenir" [model]="items" />
+    </ng-template>
+</p-toolbar>
