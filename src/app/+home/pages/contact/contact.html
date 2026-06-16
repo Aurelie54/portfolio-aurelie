@@ -1,0 +1,39 @@
+<section class="contact-section">
+
+    <p-card header="📩 Me contacter">
+
+        <form [formGroup]="contactForm" (ngSubmit)="envoyer()">
+
+            <div class="field mb-4">
+                <label>Nom</label>
+
+                <input pInputText formControlName="nom" class="w-full">
+            </div>
+
+            <div class="field mb-4">
+                <label>Email</label>
+
+                <input pInputText formControlName="email" class="w-full">
+            </div>
+
+            <div class="field mb-4">
+                <label>Sujet</label>
+
+                <input pInputText formControlName="sujet" class="w-full">
+            </div>
+
+            <div class="field mb-4">
+                <label>Message</label>
+
+                <textarea pTextarea rows="6" formControlName="message" class="w-full">
+                </textarea>
+            </div>
+
+            <p-button type="submit" label="Envoyer" icon="pi pi-send">
+            </p-button>
+
+        </form>
+
+    </p-card>
+
+</section>

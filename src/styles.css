@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files 
+*/
+@import "primeicons/primeicons.css";
+
+:root {
+    --green: #2ec4a0;
+    --green-dark: #1a9e82;
+    --green-pale: #e8faf6;
+    --navy: #1a2740;
+    --text: #3a4a5c;
+    --light: #f7f9fc;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: #fff;
+}
+
+.formation-card .p-card-body {
+    padding: 0.75rem;
+    border-left: 6px solid var(--green-dark);
+    background: var(--light);
+    border-radius: 12px;
+}
+
+.formation-card {
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.formation-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .09);
+}
+
+.formation-card .p-card-title {
+    font-weight: bold;
+}
+
+.project-card {
+    border-color: var(--p-surface-300);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.contact-section {
+    max-width: 700px;
+    margin: 80px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
