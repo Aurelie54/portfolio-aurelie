@@ -7,19 +7,21 @@ import { Toolbar } from 'primeng/toolbar';
 import { ButtonModule } from 'primeng/button';
 import { SplitButton } from 'primeng/splitbutton';
 import { InputTextModule } from 'primeng/inputtext';
-import { IconField } from 'primeng/iconfield';
-import { InputIcon } from 'primeng/inputicon';
 import { MenuItem } from 'primeng/api';
+import { AvatarModule } from 'primeng/avatar';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, DividerModule, ImageModule, MenubarModule, Toolbar, ButtonModule, SplitButton, InputTextModule, IconField, InputIcon],
+  imports: [CommonModule, RouterLink, DividerModule, AvatarModule, ImageModule, MenubarModule, Toolbar, ButtonModule, SplitButton, InputTextModule, AnimateOnScrollModule],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
 export class Header {
 
   items: MenuItem[] | undefined;
+
 
   ngOnInit() {
     this.items = [
