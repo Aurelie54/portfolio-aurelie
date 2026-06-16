@@ -1,0 +1,112 @@
+<section class="text-center" id="accueil">
+    <div class="hero-text">
+        <p-tag class="mt-2" severity="success" value="✦ Développeuse Web" [rounded]="true" />
+        <h1>Créatrice d'<em>expériences</em><br>numériques</h1>
+        <p class="hero-desc">
+            Bienvenue sur mon portfolio. Je conçois des interfaces modernes et intuitives,
+            alliant design soigné et code propre pour donner vie à vos projets.
+        </p>
+        <div class="mb-2">
+            <p-button class="mr-2" label="Voir mes projets" />
+            <p-button class="ml-2" label="Me contacter" variant="outlined" routerLink="/contact" />
+        </div>
+    </div>
+    <div class="hero-photo">
+        <div class="photo-frame">
+            <img class="mb-1" src="assets/photomoi.jpg" alt="Ma photo"
+                [style]="{'border-radius': '24px', 'width':'30%', 'height':'30%'}">
+            <div class="flex justify-content-center">
+                <p-overlaybadge severity="success">
+                </p-overlaybadge>
+                <p-message severity="contrast" variant="outlined" class="shadow-6">Disponible
+                    pour des
+                    projets</p-message>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="flex justify-content-around mt-5 p-5" [style]="{'background-color': '#1a2740'}">
+    <div class="text-center">
+        <div class="font-bold text-3xl" [style]="{'color': '#2ec4a0', 'font-family': 'Playfair Display'}">6+</div>
+        <div class="uppercase" [style]="{'color': 'rgba(255,255,255,.55)'}">Projets réalisés</div>
+    </div>
+    <div class="text-center">
+        <div class="font-bold text-3xl" [style]="{'color': '#2ec4a0', 'font-family': 'Playfair Display'}">3</div>
+        <div class="uppercase" [style]="{'color': 'rgba(255,255,255,.55)'}">Années d'expérience</div>
+    </div>
+    <div class="text-center">
+        <div class="font-bold text-3xl" [style]="{'color': '#2ec4a0', 'font-family': 'Playfair Display'}">8</div>
+        <div class="uppercase" [style]="{'color': 'rgba(255,255,255,.55)'}">Technologies maîtrisées</div>
+    </div>
+    <div class="text-center">
+        <div class="font-bold text-3xl" [style]="{'color': '#2ec4a0', 'font-family': 'Playfair Display'}">100%</div>
+        <div class="uppercase" [style]="{'color': 'rgba(255,255,255,.55)'}">Passion</div>
+    </div>
+</div>
+
+<!-- À PROPOS -->
+<section class="section" id="apropos">
+    <div class="about-grid">
+        <div class="about-text">
+            <div class="card">
+                <p-fieldset class="text-3xl" legend="À propos de moi">
+                    <p class="m-0 font-normal text-base">
+                        Je suis développeuse web passionnée par la création d'interfaces
+                        belles et fonctionnelles. Mon approche combine sens esthétique et
+                        rigueur technique pour livrer des projets qui font la différence.
+                    </p>
+                    <p class="m-0 font-normal text-base">
+                        Actuellement spécialisée en Angular & TypeScript, j'adore transformer
+                        des maquettes Figma en applications vivantes, fluides et accessibles.
+                    </p>
+                </p-fieldset>
+            </div>
+            <div class="flex justify-content-center my-4">
+                <p-tag class="success" value="Angular" />
+                <p-tag class="success mx-2" value="TypeScript" />
+                <p-tag class="success" value="HTML / CSS" />
+                <p-tag class="success mx-2" value=".NET" />
+                <p-tag class="success" value="Node.js" />
+                <p-tag class="success mx-2" value="Git" />
+                <p-tag class="success" value="UX Design" />
+            </div>
+        </div>
+        <div class="about-image mt-7">
+            <p-card class="formation-card" header="🎓 Formation">
+                <p>Bachelor Conception développement d'applications — 2024–2025</p>
+                <p>Développement informatique — 2022–2024</p>
+            </p-card>
+            <p-card class="formation-card my-3" header="💼 Expérience">
+                <p>Stage & projets freelance depuis 2023</p>
+            </p-card>
+            <p-card class="formation-card" header="🌍 Langues">
+                <p>Français (natif) · Anglais (courant)</p>
+            </p-card>
+            <p-card class="formation-card mt-3" header="✨ Passions">
+                <p>Design UI, typographie, photographie</p>
+            </p-card>
+        </div>
+    </div>
+</section>
+
+
+<p-carousel class="mt-7" [value]="projets()" [numVisible]="3" [numScroll]="3" [circular]="false"
+    [responsiveOptions]="responsiveOptions">
+    <ng-template let-projet #item>
+        <div class="project-card border-1 border-round p-4 m-2">
+            <div class="mb-4">
+                <div class="relative mx-auto">
+                    <img [src]="'assets/' + projet.image" [alt]="projet.name" class="w-10 rounded-border" />
+                </div>
+            </div>
+            <div class="mb-4 font-medium">{{ projet.name }}</div>
+            <div class="flex justify-between items-center">
+                <span>
+                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
+                    <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
+                </span>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
