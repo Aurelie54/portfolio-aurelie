@@ -13,11 +13,12 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { ProjetsService } from '../../services/projets.service';
 import { Projet } from '../../interfaces/projet';
 import { RouterLink } from '@angular/router';
+import { TabsModule } from 'primeng/tabs';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, TagModule, ButtonModule, MessageModule, BadgeModule, OverlayBadgeModule, AvatarModule, AnimateOnScrollModule, CardModule, DividerModule, FieldsetModule, CarouselModule],
+  imports: [RouterLink, TagModule, TabsModule, ButtonModule, MessageModule, BadgeModule, OverlayBadgeModule, AvatarModule, AnimateOnScrollModule, CardModule, DividerModule, FieldsetModule, CarouselModule],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })

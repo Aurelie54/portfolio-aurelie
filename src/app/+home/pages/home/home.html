@@ -7,7 +7,7 @@
             alliant design soigné et code propre pour donner vie à vos projets.
         </p>
         <div class="mb-2">
-            <p-button class="mr-2" label="Voir mes projets" />
+            <p-button class="mr-2" label="Voir mes projets" routerLink="/" fragment="projets" />
             <p-button class="ml-2" label="Me contacter" variant="outlined" routerLink="/contact" />
         </div>
     </div>
@@ -46,7 +46,7 @@
 </div>
 
 <!-- À PROPOS -->
-<section class="section" id="apropos">
+<section class="section mt-7" id="apropos">
     <div class="about-grid">
         <div class="about-text">
             <div class="card">
@@ -69,44 +69,48 @@
                 <p-tag class="success mx-2" value=".NET" />
                 <p-tag class="success" value="Node.js" />
                 <p-tag class="success mx-2" value="Git" />
-                <p-tag class="success" value="UX Design" />
+                <p-tag class="success" value="Vuejs" />
+                <p-tag class="success" value="Docker" />
             </div>
         </div>
         <div class="about-image mt-7">
-            <p-card class="formation-card" header="🎓 Formation">
+            <p-card class="formation-card" header="🎓︎ Formation">
                 <p>Bachelor Conception développement d'applications — 2024–2025</p>
                 <p>Développement informatique — 2022–2024</p>
             </p-card>
-            <p-card class="formation-card my-3" header="💼 Expérience">
-                <p>Stage & projets freelance depuis 2023</p>
+            <p-card class="formation-card my-3" header="💼︎ Expérience">
+                <p>Développement de projets personnels pour approfondir Angular, .NET et Node.js</p>
+                <p>Développeuse Full Stack Junior – Alternance — 2022–2025 — Conseil Départemental 54, Nancy</p>
             </p-card>
-            <p-card class="formation-card" header="🌍 Langues">
-                <p>Français (natif) · Anglais (courant)</p>
+            <p-card class="formation-card" header="🌍︎ Langues">
+                <p>Français (natif) · Anglais (courant) · Espagnol (notions)</p>
             </p-card>
-            <p-card class="formation-card mt-3" header="✨ Passions">
-                <p>Design UI, typographie, photographie</p>
+            <p-card class="formation-card mt-3" header="✨︎ Passions">
+                <p>Design UI, Jeux vidéos, Danse, Montage vidéos, Voyages</p>
             </p-card>
         </div>
     </div>
 </section>
 
 
-<p-carousel class="mt-7" [value]="projets()" [numVisible]="3" [numScroll]="3" [circular]="false"
-    [responsiveOptions]="responsiveOptions">
-    <ng-template let-projet #item>
-        <div class="project-card border-1 border-round p-4 m-2">
-            <div class="mb-4">
-                <div class="relative mx-auto">
-                    <img [src]="'assets/' + projet.image" [alt]="projet.name" class="w-10 rounded-border" />
+<section id="projets">
+    <div class="text-3xl mt-7">Mes Projets</div>
+    <p-carousel class="mt-4" [value]="projets()" [numVisible]="3" [numScroll]="3" [circular]="false"
+        [responsiveOptions]="responsiveOptions">
+        <ng-template let-projet #item>
+            <div class="project-card border-1 border-round p-4 m-2">
+                <div class="mb-4">
+                    <div class="relative mx-auto">
+                        <img [src]="'assets/' + projet.image" [alt]="projet.name" class="w-10 border-round-lg" />
+                    </div>
+                </div>
+                <div class="mb-4 font-medium">{{ projet.name }}</div>
+                <div class="flex justify-between items-center">
+                    <span>
+                        <p-button label="Voir" styleClass="ml-2" />
+                    </span>
                 </div>
             </div>
-            <div class="mb-4 font-medium">{{ projet.name }}</div>
-            <div class="flex justify-between items-center">
-                <span>
-                    <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
-                    <p-button icon="pi pi-shopping-cart" styleClass="ml-2" />
-                </span>
-            </div>
-        </div>
-    </ng-template>
-</p-carousel>
+        </ng-template>
+    </p-carousel>
+</section>

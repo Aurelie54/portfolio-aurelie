@@ -11,11 +11,16 @@
     --light: #f7f9fc;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
     color: var(--text);
     background: #fff;
 }
+
 
 .formation-card .p-card-body {
     padding: 0.75rem;
@@ -41,13 +46,18 @@ body {
     border-color: var(--p-surface-300);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform .3s ease;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
 }
 
-
+.project-card .flex {
+    margin-top: auto;
+}
 
 .contact-section {
     max-width: 700px;

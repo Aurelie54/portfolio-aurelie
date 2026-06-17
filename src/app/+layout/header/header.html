@@ -7,16 +7,15 @@
         </div>
     </ng-template>
     <ng-template #center>
-        <p-button icon="pi pi-plus" label="Accueil" class="mr-2" text severity="secondary" routerLink="" />
+        <p-button icon="pi pi-home" label="Accueil" class="mr-2" text severity="secondary" routerLink="" />
         <p-divider layout="vertical" />
-        <p-button icon="pi pi-print" label="A propos" class="mr-2" text severity="secondary" />
-        <p-divider layout="vertical" />
-        <p-button icon="pi pi-upload" label="Projets" text severity="secondary" />
+        <p-button icon="pi pi-address-book" label="A propos" class="mr-2" text severity="secondary" routerLink="/"
+            fragment="apropos" />
         <p-divider layout="vertical" />
         <p-button icon="pi pi-envelope" label="Contact" text severity="secondary" routerLink="/contact">
         </p-button>
     </ng-template>
     <ng-template #end>
-        <p-splitbutton label="Me soutenir" [model]="items" />
+        <p-splitbutton label="Me soutenir" />
     </ng-template>
 </p-toolbar>

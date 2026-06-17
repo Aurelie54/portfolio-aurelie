@@ -9,8 +9,8 @@ export class ProjetsService {
     private projets: Projet[] = [
         {
             id: 1,
-            name: 'Site de gestion d un annuaire d entreprise',
-            image: 'projet-annuaire.jpg',
+            name: 'Application GeoSecto',
+            image: 'GeoSecto.jpg',
             description: 'Boutique en ligne avec panier et gestion des commandes.',
             technologies: ['Angular', 'Spring Boot', 'MySQL'],
             github: 'https://github.com/votre-compte/ecommerce',
@@ -27,8 +27,8 @@ export class ProjetsService {
         },
         {
             id: 3,
-            name: 'Portfolio développeuse',
-            image: 'portfolio.jpg',
+            name: 'Application cahier de tests',
+            image: 'projet-testboard.jpg',
             description: 'Présentation de mes compétences et réalisations.',
             technologies: ['Angular', 'PrimeNG', 'CSS'],
             github: 'https://github.com/votre-compte/portfolio',
@@ -36,8 +36,8 @@ export class ProjetsService {
         },
         {
             id: 4,
-            name: 'Site de réservation de voyages',
-            image: 'travel.jpg',
+            name: 'Site de gestion d un annuaire d entreprise',
+            image: 'projet-annuaire.jpg',
             description: 'Recherche et réservation de séjours.',
             technologies: ['Angular', '.NET', 'SQL Server'],
             github: 'https://github.com/votre-compte/travel-app',
